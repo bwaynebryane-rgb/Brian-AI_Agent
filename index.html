@@ -1,107 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brian | Web Developer - Hire Me</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fc management | Web Developer - Hire Me</title>
 <style>
-*{box-sizing:border-box}
-body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:#f4f6f8;color:#1a1a1a}
-.top{background:#0f2a44;color:#fff;padding:28px 18px;text-align:center}
-.top img{width:92px;height:92px;border-radius:50%;object-fit:cover;border:3px solid #fff;background:#ddd}
-.top h1{margin:12px 0 4px;font-size:24px;letter-spacing:.5px}
-.top p{margin:0;color:#cbd5e1;font-size:14px}
-.badge{display:inline-block;margin-top:12px;background:#16a34a;color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700}
-.wrap{max-width:720px;margin:0 auto;padding:16px}
-.card{background:#fff;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-.card h3{margin:0 0 8px;font-size:16px;color:#0f2a44}
-.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;text-align:center}
-.grid div{background:#eef2f7;padding:12px;border-radius:10px}
-.grid b{font-size:20px;color:#0f2a44}
-.grid span{font-size:12px;color:#64748b}
-.pill{display:inline-block;background:#eef2f7;padding:7px 12px;border-radius:20px;font-size:13px;margin:4px 4px 0 0}
-.proj{border:1px solid #e2e8f0;border-radius:10px;padding:12px;margin-top:10px}
-.proj b{color:#0f2a44}
-.proj a{color:#0f766e;font-weight:700;text-decoration:none}
-#chat{height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:10px}
-.msg{max-width:88%;padding:12px 14px;border-radius:14px;font-size:14.5px;line-height:1.55}
-.user{background:#0f2a44;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
-.bot{background:#f1f5f9;align-self:flex-start;border-bottom-left-radius:4px;border:1px solid #e2e8f0}
-.bot a{color:#0f766e;font-weight:700}
-.quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-.quick button{background:#fff;border:1px solid #cbd5e1;padding:9px 13px;border-radius:20px;cursor:pointer;font-weight:600}
-#box{display:flex;gap:8px;margin-top:12px}
-#input{flex:1;padding:13px;border-radius:25px;border:1px solid #cbd5e1;outline:none}
-#send{background:#0f2a44;border:0;color:#fff;padding:13px 20px;border-radius:25px;font-weight:700;cursor:pointer}
-.foot{text-align:center;color:#64748b;font-size:12px;padding:10px}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#f1f5f9;color:#1e293b}
+.top{background:#0f172a;color:#fff;padding:28px 16px;text-align:center}
+.top h1{font-size:32px;letter-spacing:2px}
+.top p{color:#cbd5e1;margin-top:6px}
+.badge{display:inline-block;background:#22c55e;color:#fff;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:700;margin-top:12px}
+.wrap{max-width:800px;margin:0 auto;padding:16px}
+.card{background:#fff;border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.card h2{font-size:18px;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pill{background:#eff6ff;padding:10px;border-radius:10px;font-size:14px}
+.btn{display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:10px 18px;border-radius:20px;font-weight:700;margin-top:10px}
+.chatbox{height:380px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:4px}
+.msg{max-width:85%;padding:10px 14px;border-radius:14px;font-size:14px;line-height:1.5}
+.bot{background:#e0e7ff;align-self:flex-start}
+.user{background:#0f172a;color:#fff;align-self:flex-end}
+.quick{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.quick button{border:1px solid #cbd5e1;background:#fff;padding:6px 12px;border-radius:20px;cursor:pointer;font-size:12px}
+.inputrow{display:flex;gap:8px;margin-top:10px}
+.inputrow input{flex:1;padding:12px;border:1px solid #cbd5e1;border-radius:20px;outline:none}
+.inputrow button{background:#0f172a;color:#fff;border:none;padding:10px 18px;border-radius:20px;cursor:pointer;font-weight:700}
+.footer{text-align:center;padding:20px;color:#64748b;font-size:14px}
+.footer b{color:#0f172a}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="top">
-<img src="profile.jpg" onerror="this.src='https://via.placeholder.com/100'">
 <h1>BRIAN</h1>
-<p>Web Developer | Rongai, Kenya</p>
-<p style="font-size:13px;margin-top:6px">HTML • CSS • JavaScript • GitHub Pages • E-Commerce</p>
-<span class="badge">● AVAILABLE FOR WORK</span>
+<p>Web Developer | Rongai, Kenya | AI-Powered Portfolio</p>
+<div class="badge">● AVAILABLE FOR WORK</div><br>
+<a class="btn" href="#chat">View Portfolio ↓</a>
 </div>
+
 <div class="wrap">
-<div class="card">
-<div class="grid">
-<div><b>2+</b><br><span>Live Projects</span></div>
-<div><b>100%</b><br><span>Client Focus</span></div>
-<div><b>24/7</b><br><span>AI Assistant</span></div>
+<div class="card"><h2>💻 My Skills</h2><div class="grid">
+<div class="pill">🌐 HTML, CSS, JavaScript</div><div class="pill">⚛️ React & Modern Web</div>
+<div class="pill">🤖 AI Chatbots & AI Tools</div><div class="pill">📱 Mobile-Friendly Websites</div>
+<div class="pill">🛒 Business / E-commerce Sites</div><div class="pill">⚡ Fast, Professional Design</div>
+</div></div>
+
+<div class="card"><h2>🚀 My Projects</h2>
+<p><b>1. AI Hiring Assistant</b> - This website. Asks questions and answers like a real assistant.</p><br>
+<p><b>2. Business Websites</b> - For shops, schools, churches in Rongai & Nairobi.</p><br>
+<p><b>3. Portfolio Websites</b> - Clean, fast websites for professionals.</p>
 </div>
-</div>
-<div class="card">
-<h3>Core Skills</h3>
-<span class="pill">HTML & CSS</span><span class="pill">JavaScript</span><span class="pill">Responsive Design</span><span class="pill">GitHub Pages</span><span class="pill">WhatsApp Ordering Systems</span><span class="pill">Online Shops</span>
-</div>
-<div class="card">
-<h3>Selected Projects</h3>
-<div class="proj"><b>Ronniez Delicacy - Food Ordering Website</b><br><span style="font-size:13px;color:#64748b">Live online shop with menu, cart and WhatsApp ordering.</span><br><a href="https://bwaynebryane-rgb.github.io/Ronniez-Delicacy/">View Live Project →</a></div>
-<div class="proj"><b>Brian Portfolio</b><br><span style="font-size:13px;color:#64748b">Personal portfolio showcasing skills and work.</span><br><a href="https://bwaynebryane-rgb.github.io/Brian-Portfolio/">View Portfolio →</a></div>
-</div>
-<div class="card">
-<h3>AI Assistant - Ask About Brian</h3>
-<div id="chat">
-<div class="msg bot">Hello, welcome.<br><br>I am Brian's AI Assistant. I can provide information about his skills, projects, availability, and pricing.<br><br>Please select an option below or type your question.<br><br><b>Try:</b> Skills, Projects, Availability, Pricing, Hire Brian</div>
+
+<div class="card" id="chat">
+<h2>🤖 AI Assistant - Ask About Brian (Ask Anything)</h2>
+<div class="chatbox" id="box">
+<div class="msg bot">Hi! I'm Brian's AI Assistant. Ask me <b>ANYTHING</b> about Brian - his skills, projects, prices, location, availability, experience, education. Try: <i>"Can he build me a website?"</i></div>
 </div>
 <div class="quick">
 <button onclick="ask('What are Brian skills?')">Skills</button>
 <button onclick="ask('Show his projects')">Projects</button>
-<button onclick="ask('Is Brian available?')">Availability</button>
 <button onclick="ask('What are his prices?')">Pricing</button>
+<button onclick="ask('Where is he located?')">Location</button>
+<button onclick="ask('Is Brian available?')">Availability</button>
 <button onclick="ask('I want to hire Brian')">Hire Brian</button>
 </div>
-<div id="box">
-<input id="input" placeholder="Ask about Brian... e.g. What are his prices?">
-<button id="send" onclick="sendMsg()">Send</button>
+<div class="inputrow"><input id="inp" placeholder="Ask anything about Brian... e.g. Can he build a shop website?" onkeypress="if(event.key==='Enter')send()"><button onclick="send()">Send</button></div>
 </div>
+
+<div class="card" style="text-align:center"><h2>📞 Contact Brian Directly</h2><p>WhatsApp / Call: <b>0738390785</b></p><p>Location: <b>Rongai, Langata, Nairobi, Kenya</b></p><a class="btn" href="https://wa.me/254713585091?text=Hi%20Brian,%20I%20want%20to%20hire%20you" target="_blank">Chat on WhatsApp</a></div>
 </div>
-<div class="card" style="text-align:center">
-<h3>Contact Brian Directly</h3>
-<p style="margin:4px 0">WhatsApp / Call: <b>0713 585091</b><br>Location: Rongai, Langata, Kenya</p>
-<a href="https://wa.me/254713585091?text=Hi%20Brian!%20I%20saw%20your%20website%20and%20want%20to%20discuss%20a%20project." style="display:inline-block;background:#16a34a;color:#fff;padding:12px 20px;border-radius:25px;text-decoration:none;font-weight:700;margin-top:8px">Contact on WhatsApp</a>
-</div>
-<div class="foot">© 2026 Brian - Web Developer, Rongai, Kenya</div>
-</div>
+<div class="footer">© 2026 Brian - Web Developer in Rongai, Kenya</div>
+
 <script>
-let chat=document.getElementById('chat');let input=document.getElementById('input');let step=0;let lead={};
-function ask(t){input.value=t;sendMsg();}
-function addMsg(text,who){let d=document.createElement('div');d.className='msg '+who;d.innerHTML=text;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;}
-function sendMsg(){let text=input.value.trim();if(!text)return;addMsg(text,'user');input.value='';setTimeout(()=>{addMsg(brain(text),'bot');},400);}
-input.addEventListener('keypress',e=>{if(e.key==='Enter')sendMsg();});
-function brain(raw){let t=raw.toLowerCase();
-if(step===1){lead.company=raw;step=2;return "Thank you. Company: <b>"+raw+"</b><br><br>What role or project do you have in mind? For example: <b>Junior Web Developer</b> or <b>Business Website</b>.";}
-if(step===2){lead.role=raw;step=3;return "Noted. Role / Project: <b>"+raw+"</b><br><br>Finally, please share your WhatsApp number or Email so Brian can contact you.";}
-if(step===3){lead.contact=raw;step=0;let msg="Hi Brian! New Lead from your AI Assistant. Company: "+lead.company+" | Role/Project: "+lead.role+" | Contact: "+lead.contact;return "Thank you. Your details have been recorded.<br><br><b>Company:</b> "+lead.company+"<br><b>Role / Project:</b> "+lead.role+"<br><b>Contact:</b> "+lead.contact+"<br><br>Brian will respond within 24 hours.<br><br><a href='https://wa.me/254713585091?text="+encodeURIComponent(msg)+"'>Click here to send this to Brian on WhatsApp →</a>";}
-if(t.includes('hire')||t.includes('recruit')||t.includes('job')||t.includes('vacancy')||t.includes('position')){step=1;return "Certainly. I can help you start the hiring process.<br><br>What is your <b>Company Name</b>?";}
-if(t.includes('skill')||t.includes('what can')||t.includes('stack')){return "<b>Core Skills:</b><br>• HTML, CSS, JavaScript<br>• Responsive, Mobile-First Design<br>• GitHub Pages Hosting<br>• E-Commerce & Cart Systems<br>• WhatsApp Ordering Integration<br><br>Type <b>'Show his projects'</b> to see live examples.";}
-if(t.includes('project')||t.includes('portfolio')||t.includes('work')){return "<b>Selected Projects:</b><br><br><b>1. Ronniez Delicacy</b> - Food ordering website with cart and WhatsApp checkout.<br><a href='https://bwaynebryane-rgb.github.io/Ronniez-Delicacy/'>View Ronniez Delicacy →</a><br><br><b>2. Brian Portfolio</b> - Personal portfolio.<br><a href='https://bwaynebryane-rgb.github.io/Brian-Portfolio/'>View Portfolio →</a>";}
-if(t.includes('available')||t.includes('free')||t.includes('when')){return "<b>Availability: Available Now</b><br><br>Location: Rongai, Kenya<br>Work Mode: Remote, On-site, or Freelance<br>Start Date: Immediate<br><br>Type <b>'I want to hire Brian'</b> to begin.";}
-if(t.includes('price')||t.includes('pricing')||t.includes('much')||t.includes('salary')||t.includes('charge')||t.includes('cost')){return "<b>Service Pricing:</b><br>• Business Website - Ksh 5,000<br>• Online Shop - Ksh 10,000<br>• Portfolio Website - Ksh 5,000<br>• WhatsApp Ordering System - Ksh 7,500<br><br>For full-time employment, salary is open to discussion.<br><br>Type <b>'I want to hire Brian'</b> to discuss.";}
-if(t.includes('contact')||t.includes('phone')||t.includes('whatsapp')||t.includes('email')||t.includes('cv')){return "<b>Contact:</b><br>WhatsApp / Call: <b>0713 585091</b><br>Location: Rongai, Kenya<br><br><a href='https://wa.me/254713585091?text=Hi%20Brian!%20I%20saw%20your%20website%20and%20want%20to%20hire%20you'>Contact Brian on WhatsApp →</a>";}
-if(t.includes('hi')||t.includes('hello')||t.includes('sasa')||t.includes('mambo')){return "Hello, welcome. Are you a <b>Recruiter</b> or a <b>Business Owner</b>?<br><br>I recommend starting with <b>'Show his projects'</b>.";}
-return "I can help with:<br>• <b>'What are Brian skills?'</b><br>• <b>'Show his projects'</b><br>• <b>'Is Brian available?'</b><br>• <b>'What are his prices?'</b><br>• <b>'I want to hire Brian'</b>";}
+const box=document.getElementById('box');
+function add(t,cls){let d=document.createElement('div');d.className='msg '+cls;d.innerHTML=t;box.appendChild(d);box.scrollTop=box.scrollHeight;}
+function ask(q){document.getElementById('inp').value=q;send();}
+function send(){let i=document.getElementById('inp');let q=i.value.trim();if(!q)return;add(q,'user');i.value='';setTimeout(()=>{add(brain(q),'bot')},400);}
+
+function brain(q){
+let t=q.toLowerCase();
+
+// GREETING
+if(t.includes('hi')||t.includes('hello')||t.includes('hey')||t.includes('morning')||t.includes('afternoon')||t.includes('sasa')||t.includes('mambo')) return "Hello! 👋 Great to meet you. I'm Brian's AI Assistant. Ask me anything about Brian - his skills, prices, projects, or how to hire him. What do you want to build?";
+
+// WHO IS BRIAN
+if(t.includes('who')||t.includes('about brian')||t.includes('introduce')||t.includes('your name')) return "<b>Brian</b> is a Web Developer based in <b>Rongai, Langata, Nairobi, Kenya</b>. He builds fast, modern, professional websites for businesses, schools, churches and professionals. He also builds AI chatbots like me! Type <b>'What are his skills?'</b>";
+
+// SKILLS
+if(t.includes('skill')||t.includes('what can')||t.includes('can he')||t.includes('do you do')||t.includes('stack')||t.includes('language')||t.includes('html')||t.includes('css')||t.includes('javascript')||t.includes('react')) return "<b>Brian's Skills:</b><br>• HTML, CSS, JavaScript<br>• React & Modern Websites<br>• AI Chatbots & AI Tools<br>• Business & E-commerce Websites<br>• Mobile-Friendly Design<br>• Fast Loading & SEO<br><br>He can build you a shop website, school website, church website, portfolio, or landing page.";
+
+// PROJECTS / WORK / PORTFOLIO
+if(t.includes('project')||t.includes('portfolio')||t.includes('work')||t.includes('example')||t.includes('show')||t.includes('built')||t.includes('done')) return "<b>Brian's Projects:</b><br>1. <b>AI Hiring Assistant</b> - This site, answers questions automatically.<br>2. <b>Business Websites</b> - For shops, schools, churches in Rongai & Nairobi.<br>3. <b>Portfolio Websites</b> - For professionals to get jobs/clients.<br><br>Want a website like this? Type <b>'I want to hire Brian'</b>";
+
+// PRICES / COST / CHARGE / SALARY
+if(t.includes('price')||t.includes('cost')||t.includes('charge')||t.includes('how much')||t.includes('fee')||t.includes('salary')||t.includes('pay')||t.includes('ksh')||t.includes('kes')||t.includes('budget')||t.includes('cheap')||t.includes('expensive')) return "<b>Pricing:</b><br>• Landing Page: From <b>KSh 5,000</b><br>• Business Website: From <b>KSh 15,000</b><br>• E-commerce / Shop Website: From <b>KSh 25,000</b><br>• AI Chatbot: From <b>KSh 10,000</b><br><br>For full-time employment, salary is open to discussion.<br><br>Your exact price depends on what you want. Tell Brian your idea on WhatsApp: <b>0713 585091</b>";
+
+// LOCATION
+if(t.includes('where')||t.includes('located')||t.includes('location')||t.includes('live')||t.includes('based')||t.includes('rongai')||t.includes('kenya')||t.includes('nairobi')||t.includes('langata')||t.includes('address')) return "<b>Location:</b><br>Brian is in <b>Rongai, Langata, Nairobi, Kenya</b>.<br><br>He works <b>Remote, On-site in Nairobi, or Freelance</b> worldwide. He can meet on WhatsApp, call, or in person in Rongai/Nairobi.<br><br>Type <b>'I want to hire Brian'</b>";
+
+// AVAILABILITY
+if(t.includes('available')||t.includes('free')||t.includes('busy')||t.includes('when')||t.includes('start')||t.includes('ready')) return "<b>Yes! Brian is AVAILABLE NOW ✅</b><br>He can start your project immediately.<br>Most small websites take <b>3-7 days</b>.<br><br>Type <b>'I want to hire Brian'</b> to start.";
+
+// HIRE / CONTACT / WHATSAPP / PHONE
+if(t.includes('hire')||t.includes('contact')||t.includes('whatsapp')||t.includes('phone')||t.includes('number')||t.includes('call')||t.includes('email')||t.includes('reach')||t.includes('talk')) return "<b>Let's Hire Brian! 🎉</b><br><br>WhatsApp / Call: <b>0713 585091</b><br><a href='https://wa.me/254713585091?text=Hi%20Brian,%20I%20want%20to%20hire%20you' target='_blank'>👉 Click here to WhatsApp Brian now</a><br><br>Tell him: What website do you want? When do you need it? What is your budget? He replies fast.";
+
+// EDUCATION / EXPERIENCE / CV
+if(t.includes('education')||t.includes('school')||t.includes('study')||t.includes('learn')||t.includes('experience')||t.includes('years')||t.includes('cv')||t.includes('resume')||t.includes('qualification')||t.includes('degree')) return "<b>Experience & Learning:</b><br>Brian is a self-taught, practical Web Developer focused on real projects, not just theory. He has built portfolio sites, business sites and AI assistants.<br><br>He learns fast, works hard, and delivers on time. Ask him for his full CV on WhatsApp: <b>0713 585091</b>";
+
+// TIME / HOW LONG
+if(t.includes('how long')||t.includes('duration')||t.includes('take')||t.includes('days')||t.includes('fast')) return "Most websites take <b>3-7 days</b> depending on size.<br>• Landing page: 2-3 days<br>• Business site: 4-7 days<br>• Shop site: 7-14 days<br><br>Brian can start TODAY. Type <b>'I want to hire Brian'</b>";
+
+// WEBSITE TYPES
+if(t.includes('shop')||t.includes('store')||t.includes('ecommerce')||t.includes('e-commerce')||t.includes('sell')) return "Yes! Brian builds <b>Online Shops</b> where customers can see products, order on WhatsApp, and pay via M-Pesa. Price from KSh 25,000. Tell him what you sell on WhatsApp: <b>0713 585091</b>";
+if(t.includes('church')||t.includes('school')||t.includes('hospital')||t.includes('hotel')||t.includes('restaurant')||t.includes('salon')||t.includes('business')) return "Yes! Brian builds websites for <b>churches, schools, hotels, restaurants, salons, shops and any business</b>. A business website helps customers find you on Google and trust you. From KSh 15,000. Type <b>'I want to hire Brian'</b>";
+
+// THANK YOU / GOODBYE
+if(t.includes('thank')||t.includes('asante')||t.includes('nice')||t.includes('great')||t.includes('good')) return "You're welcome! 😊 I'm happy to help. If you want to hire Brian, just type <b>'I want to hire Brian'</b> or WhatsApp him on <b>0713 585091</b>. He will reply fast.";
+if(t.includes('bye')||t.includes('goodbye')||t.includes('later')) return "Bye! 👋 Come back anytime. Brian is in Rongai and ready to work. WhatsApp: <b>0713 585091</b>";
+
+// SMART FALLBACK - ANSWERS ANYTHING
+// If question contains "website" or "build" etc but not caught above, still answer
+if(t.includes('website')||t.includes('build')||t.includes('make')||t.includes('create')||t.includes('need')) return "Yes, Brian can build that for you! He builds fast, mobile-friendly, professional websites. Tell him exactly what you want on WhatsApp: <b>0713 585091</b> - What type of website? When do you need it? What is your budget? He will give you a price and start immediately.";
+if(t.includes('?')) return "Good question! Brian can help with that. He builds websites, AI chatbots, business sites and portfolios in Rongai, Kenya. For the best answer, WhatsApp him directly with your question: <b>0713 585091</b> - he replies fast. Or ask me: <i>'What are his skills?'</i> / <i>'What are his prices?'</i> / <i>'I want to hire Brian'</i>";
+// FINAL FALLBACK - NEVER SAY "I DON'T UNDERSTAND"
+return "I hear you! Brian is a Web Developer in <b>Rongai, Kenya</b> who builds websites and AI tools. He is <b>AVAILABLE NOW</b>. For your question, the fastest way is WhatsApp him directly: <b>0713 585091</b>. Or try asking me: <i>'What are his skills?'</i>, <i>'What are his prices?'</i>, <i>'Where is he located?'</i>";
+}
 </script>
 </body>
 </html>
