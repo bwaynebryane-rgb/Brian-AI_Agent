@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brian AI Agent</title>
+<style>
+body{font-family:Arial;margin:0;background:#111;color:#fff}
+header{background:#e67e22;padding:20px;text-align:center}
+header img{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid #fff}
+#chat{padding:15px;height:420px;overflow-y:auto;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:85%;padding:12px 14px;border-radius:15px;font-size:15px;line-height:1.4}
+.user{background:#25D366;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.bot{background:#222;border:1px solid #333;align-self:flex-start;border-bottom-left-radius:4px}
+.quick{display:flex;gap:8px;flex-wrap:wrap;padding:0 15px}
+.quick button{background:#333;color:#fff;border:1px solid #555;padding:8px 12px;border-radius:20px}
+#box{display:flex;padding:15px;gap:8px}
+#input{flex:1;padding:14px;border-radius:25px;border:0;outline:none}
+#send{background:#e67e22;border:0;color:#fff;padding:14px 20px;border-radius:25px;font-weight:bold}
+</style>
+</head>
+<body>
+
+<header>
+<img src="profile.jpg" onerror="this.src='https://via.placeholder.com/100'">
+<h2 style="margin:8px 0 2px">🤖 BRIAN AI AGENT</h2>
+<p style="margin:0;font-size:13px">Online • Answers in seconds • Rongai, Kenya</p>
+</header>
+
+<div id="chat">
+<div class="msg bot">Hi! I'm Brian's AI Agent 👋<br><br>I can help you:<br>1. Get price for a website<br>2. Order from Ronniez Delicacy<br>3. Hire Brian<br><br>What do you want?</div>
+</div>
+
+<div class="quick">
+<button onclick="ask('How much is a website?')">💰 Website Price?</button>
+<button onclick="ask('Ronniez Delicacy menu')">🍖 Ronniez Menu</button>
+<button onclick="ask('I want to hire Brian')">💼 Hire Brian</button>
+<button onclick="ask('I want to order food')">🛒 Order Food</button>
+</div>
+
+<div id="box">
+<input id="input" placeholder="Type... e.g. How much is full platter?">
+<button id="send" onclick="sendMsg()">Send</button>
+</div>
+
+<script>
+let chat = document.getElementById('chat');
+let input = document.getElementById('input');
+
+function ask(text){ input.value = text; sendMsg(); }
+
+function addMsg(text, who){
+  let d = document.createElement('div');
+  d.className = 'msg ' + who;
+  d.innerHTML = text;
+  chat.appendChild(d);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function sendMsg(){
+  let text = input.value.trim();
+  if(!text) return;
+  addMsg(text, 'user');
+  input.value = '';
+  setTimeout(()=>{ addMsg(brain(text.toLowerCase()), 'bot'); }, 600);
+}
+
+input.addEventListener('keypress', e=>{ if(e.key==='Enter') sendMsg(); });
+
+function brain(t){
+  // PRICES
+  if(t.includes('website') && t.includes('much') || t.includes('price') && t.includes('website') || t.includes('cost') && t.includes('website'))
+    return "💰 <b>Brian's Prices:</b><br>1. Business Website - Ksh 5,000<br>2. Online Shop - Ksh 10,000<br>3. Portfolio - Ksh 5,000<br>4. WhatsApp Ordering - Ksh 7,500<br><br>All work on phone. Want one? Type <b>'Hire Brian'</b>";
+  
+  if(t.includes('ronniez') || t.includes('menu') || t.includes('nyama') || t.includes('platter') || t.includes('choma'))
+    return "🍖 <b>Ronniez Delicacy Menu:</b><br>• Full Platter (serves 4) - <b>Ksh 3,200</b><br>• Half Platter - Ksh 1,700<br>• 1kg Nyama Choma - Ksh 900<br>• Mutura - Ksh 300<br><br>Order sends to WhatsApp automatically. Type <b>'Order food'</b> to start.";
+
+  if(t.includes('order food') || t.includes('order') && t.includes('food'))
+    return "🛒 Great! Let's order.<br><br>What do you want?<br>Type e.g. <b>'Full platter'</b> or <b>'1kg Nyama'</b><br><br>I will calculate total for you.";
+
+  if(t.includes('full platter'))
+    return "✅ Full Platter = <b>Ksh 3,200</b><br><br>Do you want delivery in Rongai? Type <b>'Yes delivery'</b> or <b>'No pickup'</b>";
+
+  if(t.includes('hire') || t.includes('job') || t.includes('work'))
+    return "💼 Brian is available!<br><br>He builds websites in Rongai. Call/WhatsApp: <b>0713 585091</b><br><br><a href='https://wa.me/254713585091?text=Hi%20Brian!%20I%20want%20to%20hire%20you' style='color:#25D366'>👉 Click here to WhatsApp Brian</a>";
+
+  if(t.includes('hi') || t.includes('hello') || t.includes('sasa') || t.includes('mambo'))
+    return "Sasa! 👋 Mambo? I'm Brian's AI Agent. Ask me about <b>website price</b> or <b>Ronniez menu</b>";
+
+  if(t.includes('who are you') || t.includes('your name'))
+    return "I'm <b>Brian AI Agent</b> 🤖 - I work for Brian, Web Developer in Rongai. I answer customers 24/7 even when Brian is sleeping!";
+
+  if(t.includes('location') || t.includes('where'))
+    return "📍 Brian is in <b>Rongai, Langata, Kenya</b>. He delivers websites online and food in Rongai.";
+
+  if(t.includes('thank'))
+    return "Karibu sana! 🙏 Anytime. Type <b>'Hire Brian'</b> if you want a website.";
+
+  return "Hmm, I didn't get that. 🤔<br><br>Try asking:<br>• <b>'How much is a website?'</b><br>• <b>'Ronniez menu'</b><br>• <b>'Hire Brian'</b><br><br>Or WhatsApp Brian directly: <b>0713 585091</b>";
+}
+</script>
+</body>
+</html>
